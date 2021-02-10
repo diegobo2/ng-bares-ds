@@ -1,0 +1,27 @@
+<figure class="figure">
+  <img src="{{ bar.image }}" class="figure-img img-fluid rounded">
+  <figcaption class="figure-caption">
+    <h4>{{bar.title}}</h4>
+    <h5> Rating: {{bar.rating}}</h5>
+    <h5> {{bar.description}}</h5>
+    <h5> Menu:</h5>
+    <ul *ngFor="let food of bar.menu" class="list-group list-group-flush">
+      <li class="list-group-item font-italic"><h5>{{ food }}</h5></li>
+    </ul>
+  </figcaption>
+</figure>
+
+<div class="row mt-4">
+  <div class="col-md-4">
+    <button class="btn btn-outline-secondary mr-3"
+            style="width:80px"
+            (click)="onBack()">
+      <i class="fa fa-chevron-left"></i> Back
+    </button>
+    <button class="btn btn-outline-primary"
+            style="width:80px"
+            (click)="goEdit()">
+      Edit
+    </button>
+  </div>
+</div>

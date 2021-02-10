@@ -1,0 +1,9 @@
+<figure class="figure">
+  <img src="{{bar.image}}" class="figure-img img-fluid rounded">
+  <figcaption class="figure-caption">
+    <h5><a [routerLink]="['/bars', bar.id]">{{bar.title}}</a>
+      <span> ({{bar.rating}})</span>
+    </h5>
+    <p>{{bar.shortDescription}}</p>
+  </figcaption>
+</figure>
